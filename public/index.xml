@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    
+    <title>Sachin</title>
+    <description></description>
+    <link>//localhost:1313/</link>
+    
+    <language>en</language>
+    <copyright>Copyright 2024, Calvin Tran</copyright>
+    <lastBuildDate>Mon, 14 Oct 2024 00:09:55 -0500</lastBuildDate>
+    <generator>Hugo - gohugo.io</generator>
+    <docs>http://cyber.harvard.edu/rss/rss.html</docs>
+    <atom:link href="//localhost:1313//atom.xml" rel="self" type="application/atom+xml"/>
+    
+    
+  </channel>
+</rss>
