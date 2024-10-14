@@ -2,10 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sachin</title>
-    <link>//localhost:1313/tags/</link>
+    <link>http://localhost:1313/pages/tags/</link>
     <description>Recent content in Tags on Sachin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pages/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bruce Willis</title>
+      <link>http://localhost:1313/pages/tags/hugo/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pages/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sample</title>
+      <link>http://localhost:1313/pages/tags/sample/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pages/tags/sample/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Css</title>
+      <link>http://localhost:1313/pages/tags/css/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pages/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>http://localhost:1313/pages/tags/html/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pages/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>http://localhost:1313/pages/tags/markdown/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pages/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Emoji</title>
+      <link>http://localhost:1313/pages/tags/emoji/</link>
+      <pubDate>Sat, 05 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pages/tags/emoji/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

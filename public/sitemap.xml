@@ -2,17 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/docs/</loc>
-    <lastmod>2024-10-14T00:09:55-05:00</lastmod>
+    <loc>http://localhost:1313/pages/</loc>
+    <lastmod>2022-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
-    <lastmod>2024-10-14T00:09:55-05:00</lastmod>
+    <loc>http://localhost:1313/pages/tags/hugo/</loc>
+    <lastmod>2022-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/docs/test/</loc>
-    <lastmod>2024-10-14T00:09:55-05:00</lastmod>
+    <loc>http://localhost:1313/pages/posts/lorem-ipsum-install/</loc>
+    <lastmod>2022-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/pages/posts/</loc>
+    <lastmod>2022-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/pages/tags/sample/</loc>
+    <lastmod>2022-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/tags/</loc>
+    <lastmod>2022-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/tags/css/</loc>
+    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/tags/html/</loc>
+    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/posts/lorem-syntax/</loc>
+    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/tags/markdown/</loc>
+    <lastmod>2022-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/posts/lorem-example-content/</loc>
+    <lastmod>2022-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/posts/lorem-content/</loc>
+    <lastmod>2022-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/tags/emoji/</loc>
+    <lastmod>2022-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/posts/lorem-support/</loc>
+    <lastmod>2022-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pages/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/pages/categories/</loc>
   </url>
 </urlset>
