@@ -1,4 +1,4 @@
-baseURL = 'https://hiriisave.github.io/pages'
+baseURL = 'https://hirisave.github.io/pages'
 languageCode = 'en-us'
 title = 'Sachin'
 paginate = 3
@@ -9,13 +9,13 @@ theme = 'maverick'
 
 [params]
   logo = '/assets/favicon.ico'
-  description = "A minimal hugo theme focus on content"
-  author = 'Calvin Tran'
+  description = "Developer notes, pro hacks, and tips from the trenches. Minimal fluff, maximum signal."
+  author = 'Sachin'
 
-  [params.comments]
-    enabled = true
-    githubRepo = 'canhtran/maverick'
-    theme = 'github-light'
+[params.comments]
+  enabled = true
+  githubRepo = 'hirisave/pages'
+  theme = 'github-light'
 
 
 [menu]
@@ -26,7 +26,7 @@ theme = 'maverick'
     weight = "-110"
   [[menu.main]]
     identifier = "posts"
-    name = "Post"
+    name = "Posts"
     url = "/posts/"
     weight = -200
 

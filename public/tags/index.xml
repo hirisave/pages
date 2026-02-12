@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sachin</title>
-    <link>http://localhost:1313/pages/tags/</link>
+    <link>https://hirisave.github.io/pages/tags/</link>
     <description>Recent content in Tags on Sachin</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jul 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/pages/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hirisave.github.io/pages/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certificates</title>
+      <link>https://hirisave.github.io/pages/tags/certificates/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://hirisave.github.io/pages/tags/certificates/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://hirisave.github.io/pages/tags/java/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://hirisave.github.io/pages/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mac</title>
+      <link>https://hirisave.github.io/pages/tags/mac/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://hirisave.github.io/pages/tags/mac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>https://hirisave.github.io/pages/tags/shell/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://hirisave.github.io/pages/tags/shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssl</title>
+      <link>https://hirisave.github.io/pages/tags/ssl/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://hirisave.github.io/pages/tags/ssl/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Bruce Willis</title>
-      <link>http://localhost:1313/pages/tags/hugo/</link>
-      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sample</title>
-      <link>http://localhost:1313/pages/tags/sample/</link>
-      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/tags/sample/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Css</title>
-      <link>http://localhost:1313/pages/tags/css/</link>
-      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Html</title>
-      <link>http://localhost:1313/pages/tags/html/</link>
-      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/tags/html/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>http://localhost:1313/pages/tags/markdown/</link>
-      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/tags/markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Emoji</title>
-      <link>http://localhost:1313/pages/tags/emoji/</link>
-      <pubDate>Sat, 05 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pages/tags/emoji/</guid>
+      <link>https://hirisave.github.io/pages/tags/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hirisave.github.io/pages/tags/hugo/</guid>
       <description></description>
     </item>
   </channel>

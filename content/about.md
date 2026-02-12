@@ -2,15 +2,6 @@
 title: About
 ---
 
-### Listography
+I'm Sachin—senior lead software developer. I've been building and shipping for a while; this is where I put the stuff worth keeping: notes, tricks, and the occasional war story.
 
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-- Sed do eiusmod tempor incididunt
-- Ut labore et dolore magna aliqua
-- Ut enim ad minim veniam
-- Quis nostrud exercitation ullamco
-- Laboris nisi ut aliquip ex ea commodo
-- Duis aute irure dolor in reprehenderit
-- In voluptate velit esse cillum dolore
-- Eu fugiat nulla pariatur
+No fluff. Just things that actually helped.
