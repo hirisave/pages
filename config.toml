@@ -44,7 +44,7 @@ theme = 'maverick'
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    noHl = false
+    noHl = true
     style = 'monokailight'
     tabWidth = 4
 
