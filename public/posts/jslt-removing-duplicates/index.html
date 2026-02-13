@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head><script src="/pages/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=pages/livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <script>
       (function() {
         var t = localStorage.getItem('theme');
@@ -10,10 +10,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Liste - http://localhost:1313/pages/">
+    <meta name="author" content="Liste - http://localhost:1313/">
     <title>JSLT: removing duplicates by key | Sachin</title>
-    <meta name="description" content="">
-    <meta property="og:url" content="http://localhost:1313/pages/posts/jslt-removing-duplicates/">
+    <meta name="description" content="Developer notes, pro hacks, and tips from the trenches. Minimal fluff, maximum signal.">
+    <meta property="og:url" content="http://localhost:1313/posts/jslt-removing-duplicates/">
   <meta property="og:site_name" content="Sachin">
   <meta property="og:title" content="JSLT: removing duplicates by key">
   <meta property="og:description" content="When you end up with an array that has duplicate entries by some key (e.g. id, tid), you can dedupe in JSLT by turning the array into an object keyed by that field, then turning the object’s values back into an array. Duplicate keys overwrite, so you keep one entry per key.
@@ -38,12 +38,12 @@ Builds an object: key = .keyField, value = the whole element. Same key appears m
   <meta itemprop="wordCount" content="317">
   <meta itemprop="keywords" content="Jslt,Json,Tips">
     
-    <link rel="canonical" href="http://localhost:1313/pages/posts/jslt-removing-duplicates/">
-    <link rel="icon" href="http://localhost:1313/pages//assets/favicon.ico">
+    <link rel="canonical" href="http://localhost:1313/posts/jslt-removing-duplicates/">
+    <link rel="icon" href="http://localhost:1313//assets/favicon.ico">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
     <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
-    <link rel="alternate" type="application/atom+xml" title="Sachin" href="http://localhost:1313/pages//atom.xml" />
-    <link rel="alternate" type="application/json" title="Sachin" href="http://localhost:1313/pages//feed.json" />
+    <link rel="alternate" type="application/atom+xml" title="Sachin" href="http://localhost:1313//atom.xml" />
+    <link rel="alternate" type="application/json" title="Sachin" href="http://localhost:1313//feed.json" />
     <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bricolage+Grotesque">
     
@@ -66,7 +66,7 @@ Builds an object: key = .keyField, value = the whole element. Same key appears m
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "http:\/\/localhost:1313\/pages\/posts\/jslt-removing-duplicates\/"
+          "@id": "http:\/\/localhost:1313\/posts\/jslt-removing-duplicates\/"
       },
       "author" : {
           "@type": "Person",
@@ -88,16 +88,16 @@ Builds an object: key = .keyField, value = the whole element. Same key appears m
       "publisher":{
           "@type":"Organization",
           "name": "Sachin",
-          "url": "http://localhost:1313/pages/",
+          "url": "http://localhost:1313/",
           "logo": {
               "@type": "ImageObject",
-              "url": "http:\/\/localhost:1313\/pages\/",
+              "url": "http:\/\/localhost:1313\/assets\/favicon.ico",
               "width":"32",
               "height":"32"
           }
       },
-      "image": "http://localhost:1313/pages/",
-      "url" : "http:\/\/localhost:1313\/pages\/posts\/jslt-removing-duplicates\/",
+      "image": "http://localhost:1313/assets/favicon.ico",
+      "url" : "http:\/\/localhost:1313\/posts\/jslt-removing-duplicates\/",
       "wordCount" : "317",
       "genre" : [ "jslt" , "json" , "tips" ],
       "keywords" : [ "jslt" , "json" , "tips" ]
@@ -148,13 +148,13 @@ Builds an object: key = .keyField, value = the whole element. Same key appears m
   <div class="content">
     <header>
   <p style="padding: 0;margin: 0;">
-    <a href="http://localhost:1313/pages/">
+    <a href="http://localhost:1313/">
       <span class="hero-name">Sachin</span><span class="hero-cursor" aria-hidden="true"></span>
     </a>
   </p>
   <ul style="padding: 0;margin: 0;">
-    <li><a href="http://localhost:1313/pages/posts/"><span>Posts</span></a></li>
-    <li><a href="http://localhost:1313/pages/about/"><span>About</span></a></li>
+    <li><a href="http://localhost:1313/posts/"><span>Posts</span></a></li>
+    <li><a href="http://localhost:1313/about/"><span>About</span></a></li>
     <li><button type="button" class="theme-toggle" id="theme-toggle" title="Toggle dark/light">◐</button></li>
   </ul>
 </header>
@@ -189,27 +189,27 @@ Iterating over an object gives key/value; take <code>.value</code> and you get t
 </li>
 </ol>
 <p><strong>Together:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">let</span> <span style="color:#960050;background-color:#1e0010">withDuplicates</span> <span style="color:#960050;background-color:#1e0010">=</span> [
-</span></span><span style="display:flex;"><span>  { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Alpha&#34;</span> },
-</span></span><span style="display:flex;"><span>  { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Beta&#34;</span> },
-</span></span><span style="display:flex;"><span>  { <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Alpha again&#34;</span> }
-</span></span><span style="display:flex;"><span>]
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">let</span> <span style="color:#960050;background-color:#1e0010">byId</span> <span style="color:#960050;background-color:#1e0010">=</span> { <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($withDuplicates)</span> <span style="color:#960050;background-color:#1e0010">.id</span> <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#960050;background-color:#1e0010">.</span> }
-</span></span><span style="display:flex;"><span>[ <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($byId)</span> <span style="color:#960050;background-color:#1e0010">.value</span> ]
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">let</span> <span style="color:#960050;background-color:#1e0010">withDuplicates</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#111">[</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">{</span> <span style="color:#f92672">&#34;id&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;a&#34;</span><span style="color:#111">,</span> <span style="color:#f92672">&#34;name&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;Alpha&#34;</span> <span style="color:#111">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">{</span> <span style="color:#f92672">&#34;id&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;b&#34;</span><span style="color:#111">,</span> <span style="color:#f92672">&#34;name&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;Beta&#34;</span> <span style="color:#111">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">{</span> <span style="color:#f92672">&#34;id&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;a&#34;</span><span style="color:#111">,</span> <span style="color:#f92672">&#34;name&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;Alpha again&#34;</span> <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">let</span> <span style="color:#960050;background-color:#1e0010">byId</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#111">{</span> <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($withDuplicates)</span> <span style="color:#960050;background-color:#1e0010">.id</span> <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#960050;background-color:#1e0010">.</span> <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">[</span> <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($byId)</span> <span style="color:#960050;background-color:#1e0010">.value</span> <span style="color:#111">]</span>
 </span></span></code></pre></div><p><strong>Result:</strong> two objects (one per distinct <code>id</code>), not three. The second <code>&quot;a&quot;</code> overwrote the first in <code>byId</code>.</p>
 <hr>
 <h3 id="in-a-function">In a function</h3>
 <p>Same idea in a reusable helper:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">def</span> <span style="color:#960050;background-color:#1e0010">dedupe-by-key(array,</span> <span style="color:#960050;background-color:#1e0010">keyField)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">let</span> <span style="color:#960050;background-color:#1e0010">obj</span> <span style="color:#960050;background-color:#1e0010">=</span> { <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($array)</span> <span style="color:#960050;background-color:#1e0010">.[$keyField]</span> <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#960050;background-color:#1e0010">.</span> }
-</span></span><span style="display:flex;"><span>  [ <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($obj)</span> <span style="color:#960050;background-color:#1e0010">.value</span> ]
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">def</span> <span style="color:#960050;background-color:#1e0010">dedupe-by-key(array,</span> <span style="color:#960050;background-color:#1e0010">keyField)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">let</span> <span style="color:#960050;background-color:#1e0010">obj</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#111">{</span> <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($array)</span> <span style="color:#960050;background-color:#1e0010">.[$keyField]</span> <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#960050;background-color:#1e0010">.</span> <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">[</span> <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($obj)</span> <span style="color:#960050;background-color:#1e0010">.value</span> <span style="color:#111">]</span>
 </span></span></code></pre></div><p>Use it like <code>dedupe-by-key($myArray, &quot;tid&quot;)</code> (or whatever your key field is). If JSLT doesn’t support dynamic field access, inline the key:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">def</span> <span style="color:#960050;background-color:#1e0010">dedupe-by-tid(array)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">let</span> <span style="color:#960050;background-color:#1e0010">obj</span> <span style="color:#960050;background-color:#1e0010">=</span> { <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($array)</span> <span style="color:#960050;background-color:#1e0010">.tid</span> <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#960050;background-color:#1e0010">.</span> }
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">def</span> <span style="color:#960050;background-color:#1e0010">dedupe-by-tid(array)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">let</span> <span style="color:#960050;background-color:#1e0010">obj</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#111">{</span> <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($array)</span> <span style="color:#960050;background-color:#1e0010">.tid</span> <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#960050;background-color:#1e0010">.</span> <span style="color:#111">}</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">if</span> <span style="color:#960050;background-color:#1e0010">($obj)</span>
-</span></span><span style="display:flex;"><span>    [ <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($obj)</span> <span style="color:#960050;background-color:#1e0010">.value</span> ]
+</span></span><span style="display:flex;"><span>    <span style="color:#111">[</span> <span style="color:#960050;background-color:#1e0010">for</span> <span style="color:#960050;background-color:#1e0010">($obj)</span> <span style="color:#960050;background-color:#1e0010">.value</span> <span style="color:#111">]</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">else</span>
-</span></span><span style="display:flex;"><span>    []
+</span></span><span style="display:flex;"><span>    <span style="color:#111">[]</span>
 </span></span></code></pre></div><p>Then <code>dedupe-by-tid($sharedDevicesWithDuplicates)</code> gives you devices unique by <code>tid</code>.</p>
 <hr>
 <h3 id="where-this-fits">Where this fits</h3>
@@ -226,13 +226,26 @@ Iterating over an object gives key/value; take <code>.value</code> and you get t
         <span class="g time">February 5, 2025 </span> &#8729;
          
         
-        <a href="/pages/posts/#jslt">jslt</a>
-        <a href="/pages/posts/#json">json</a>
-        <a href="/pages/posts/#tips">tips</a>
+        <a href="/posts/#jslt">jslt</a>
+        <a href="/posts/#json">json</a>
+        <a href="/posts/#tips">tips</a>
       </div>
       
     </section>
     
+    
+    <div id="comments">
+      
+<script src="https://utteranc.es/client.js"
+    repo=hirisave/pages
+    issue-term="pathname"
+    theme=github-light
+    crossorigin="anonymous"
+    async>
+</script>
+
+
+    </div>
     
     
   </div>

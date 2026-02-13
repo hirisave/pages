@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head><script src="/pages/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=pages/livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <script>
       (function() {
         var t = localStorage.getItem('theme');
@@ -10,10 +10,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Liste - http://localhost:1313/pages/">
+    <meta name="author" content="Liste - http://localhost:1313/">
     <title>Switching between multiple Java versions (macOS) | Sachin</title>
-    <meta name="description" content="">
-    <meta property="og:url" content="http://localhost:1313/pages/posts/switching-java-versions/">
+    <meta name="description" content="Developer notes, pro hacks, and tips from the trenches. Minimal fluff, maximum signal.">
+    <meta property="og:url" content="http://localhost:1313/posts/switching-java-versions/">
   <meta property="og:site_name" content="Sachin">
   <meta property="og:title" content="Switching between multiple Java versions (macOS)">
   <meta property="og:description" content="On macOS, java_home gives you the path for a given JDK version. Wire that into env vars and aliases and you can switch JVMs from the shell without touching system settings.
@@ -38,12 +38,12 @@ Drop this into your ~/.zshrc or ~/.bash_profile:
   <meta itemprop="wordCount" content="132">
   <meta itemprop="keywords" content="Java,Shell,Mac">
     
-    <link rel="canonical" href="http://localhost:1313/pages/posts/switching-java-versions/">
-    <link rel="icon" href="http://localhost:1313/pages//assets/favicon.ico">
+    <link rel="canonical" href="http://localhost:1313/posts/switching-java-versions/">
+    <link rel="icon" href="http://localhost:1313//assets/favicon.ico">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
     <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
-    <link rel="alternate" type="application/atom+xml" title="Sachin" href="http://localhost:1313/pages//atom.xml" />
-    <link rel="alternate" type="application/json" title="Sachin" href="http://localhost:1313/pages//feed.json" />
+    <link rel="alternate" type="application/atom+xml" title="Sachin" href="http://localhost:1313//atom.xml" />
+    <link rel="alternate" type="application/json" title="Sachin" href="http://localhost:1313//feed.json" />
     <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bricolage+Grotesque">
     
@@ -61,12 +61,12 @@ Drop this into your ~/.zshrc or ~/.bash_profile:
       "name": "Switching between multiple Java versions (macOS)",
       "headline": "Switching between multiple Java versions (macOS)",
       "alternativeHeadline": "",
-      "description": "\u003cp\u003eOn macOS, \u003ccode\u003ejava_home\u003c\/code\u003e gives you the path for a given JDK version. Wire that into env vars and aliases and you can switch JVMs from the shell without touching system settings.\u003c\/p\u003e\n\u003cp\u003eDrop this into your \u003ccode\u003e~\/.zshrc\u003c\/code\u003e or \u003ccode\u003e~\/.bash_profile\u003c\/code\u003e:\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Java\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eexport JAVA8\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060\u003c\/span\u003e\/usr\/libexec\/java_home -v 1.8\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eexport JAVA11\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060\u003c\/span\u003e\/usr\/libexec\/java_home -v 11\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eexport JAVA17\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060\u003c\/span\u003e\/usr\/libexec\/java_home -v 17\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eexport JAVA21\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060\u003c\/span\u003e\/usr\/libexec\/java_home -v 21\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# default version of java\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eexport JAVA_HOME\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e$JAVA21\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# aliases for dynamic JVM switching\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ealias java8\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;export JAVA_HOME=\\$JAVA8\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ealias java11\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;export JAVA_HOME=\\$JAVA11\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ealias java17\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;export JAVA_HOME=\\$JAVA17\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ealias java21\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;export JAVA_HOME=\\$JAVA21\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e\u003cstrong\u003eUsage:\u003c\/strong\u003e Open a new terminal (or \u003ccode\u003esource ~\/.zshrc\u003c\/code\u003e). Default is Java 21. Run \u003ccode\u003ejava8\u003c\/code\u003e, \u003ccode\u003ejava11\u003c\/code\u003e, \u003ccode\u003ejava17\u003c\/code\u003e, or \u003ccode\u003ejava21\u003c\/code\u003e to switch for that session. \u003ccode\u003ejava -version\u003c\/code\u003e and any tool that reads \u003ccode\u003eJAVA_HOME\u003c\/code\u003e will use the active one.\u003c\/p\u003e",
+      "description": "\u003cp\u003eOn macOS, \u003ccode\u003ejava_home\u003c\/code\u003e gives you the path for a given JDK version. Wire that into env vars and aliases and you can switch JVMs from the shell without touching system settings.\u003c\/p\u003e\n\u003cp\u003eDrop this into your \u003ccode\u003e~\/.zshrc\u003c\/code\u003e or \u003ccode\u003e~\/.bash_profile\u003c\/code\u003e:\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# Java\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#111\u0022\u003eexport\u003c\/span\u003e \u003cspan style=\u0022color:#111\u0022\u003eJAVA8\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\u0060\u003c\/span\u003e\/usr\/libexec\/java_home -v 1.8\u003cspan style=\u0022color:#d88200\u0022\u003e\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#111\u0022\u003eexport\u003c\/span\u003e \u003cspan style=\u0022color:#111\u0022\u003eJAVA11\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\u0060\u003c\/span\u003e\/usr\/libexec\/java_home -v 11\u003cspan style=\u0022color:#d88200\u0022\u003e\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#111\u0022\u003eexport\u003c\/span\u003e \u003cspan style=\u0022color:#111\u0022\u003eJAVA17\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\u0060\u003c\/span\u003e\/usr\/libexec\/java_home -v 17\u003cspan style=\u0022color:#d88200\u0022\u003e\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#111\u0022\u003eexport\u003c\/span\u003e \u003cspan style=\u0022color:#111\u0022\u003eJAVA21\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\u0060\u003c\/span\u003e\/usr\/libexec\/java_home -v 21\u003cspan style=\u0022color:#d88200\u0022\u003e\u0060\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# default version of java\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#111\u0022\u003eexport\u003c\/span\u003e \u003cspan style=\u0022color:#111\u0022\u003eJAVA_HOME\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#111\u0022\u003e$JAVA21\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#75715e\u0022\u003e# aliases for dynamic JVM switching\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#111\u0022\u003ealias\u003c\/span\u003e \u003cspan style=\u0022color:#111\u0022\u003ejava8\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\u0026#34;export JAVA_HOME=\\$JAVA8\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#111\u0022\u003ealias\u003c\/span\u003e \u003cspan style=\u0022color:#111\u0022\u003ejava11\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\u0026#34;export JAVA_HOME=\\$JAVA11\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#111\u0022\u003ealias\u003c\/span\u003e \u003cspan style=\u0022color:#111\u0022\u003ejava17\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\u0026#34;export JAVA_HOME=\\$JAVA17\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#111\u0022\u003ealias\u003c\/span\u003e \u003cspan style=\u0022color:#111\u0022\u003ejava21\u003c\/span\u003e\u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\u0026#34;export JAVA_HOME=\\$JAVA21\u0026#34;\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e\u003cstrong\u003eUsage:\u003c\/strong\u003e Open a new terminal (or \u003ccode\u003esource ~\/.zshrc\u003c\/code\u003e). Default is Java 21. Run \u003ccode\u003ejava8\u003c\/code\u003e, \u003ccode\u003ejava11\u003c\/code\u003e, \u003ccode\u003ejava17\u003c\/code\u003e, or \u003ccode\u003ejava21\u003c\/code\u003e to switch for that session. \u003ccode\u003ejava -version\u003c\/code\u003e and any tool that reads \u003ccode\u003eJAVA_HOME\u003c\/code\u003e will use the active one.\u003c\/p\u003e",
       "inLanguage": "en-us",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "http:\/\/localhost:1313\/pages\/posts\/switching-java-versions\/"
+          "@id": "http:\/\/localhost:1313\/posts\/switching-java-versions\/"
       },
       "author" : {
           "@type": "Person",
@@ -88,16 +88,16 @@ Drop this into your ~/.zshrc or ~/.bash_profile:
       "publisher":{
           "@type":"Organization",
           "name": "Sachin",
-          "url": "http://localhost:1313/pages/",
+          "url": "http://localhost:1313/",
           "logo": {
               "@type": "ImageObject",
-              "url": "http:\/\/localhost:1313\/pages\/",
+              "url": "http:\/\/localhost:1313\/assets\/favicon.ico",
               "width":"32",
               "height":"32"
           }
       },
-      "image": "http://localhost:1313/pages/",
-      "url" : "http:\/\/localhost:1313\/pages\/posts\/switching-java-versions\/",
+      "image": "http://localhost:1313/assets/favicon.ico",
+      "url" : "http:\/\/localhost:1313\/posts\/switching-java-versions\/",
       "wordCount" : "132",
       "genre" : [ "java" , "shell" , "mac" ],
       "keywords" : [ "java" , "shell" , "mac" ]
@@ -148,13 +148,13 @@ Drop this into your ~/.zshrc or ~/.bash_profile:
   <div class="content">
     <header>
   <p style="padding: 0;margin: 0;">
-    <a href="http://localhost:1313/pages/">
+    <a href="http://localhost:1313/">
       <span class="hero-name">Sachin</span><span class="hero-cursor" aria-hidden="true"></span>
     </a>
   </p>
   <ul style="padding: 0;margin: 0;">
-    <li><a href="http://localhost:1313/pages/posts/"><span>Posts</span></a></li>
-    <li><a href="http://localhost:1313/pages/about/"><span>About</span></a></li>
+    <li><a href="http://localhost:1313/posts/"><span>Posts</span></a></li>
+    <li><a href="http://localhost:1313/about/"><span>About</span></a></li>
     <li><button type="button" class="theme-toggle" id="theme-toggle" title="Toggle dark/light">◐</button></li>
   </ul>
 </header>
@@ -177,20 +177,20 @@ Drop this into your ~/.zshrc or ~/.bash_profile:
       <h2 class="post">Switching between multiple Java versions (macOS)</h2>
       <p>On macOS, <code>java_home</code> gives you the path for a given JDK version. Wire that into env vars and aliases and you can switch JVMs from the shell without touching system settings.</p>
 <p>Drop this into your <code>~/.zshrc</code> or <code>~/.bash_profile</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Java</span>
-</span></span><span style="display:flex;"><span>export JAVA8<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>/usr/libexec/java_home -v 1.8<span style="color:#e6db74">`</span>
-</span></span><span style="display:flex;"><span>export JAVA11<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>/usr/libexec/java_home -v 11<span style="color:#e6db74">`</span>
-</span></span><span style="display:flex;"><span>export JAVA17<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>/usr/libexec/java_home -v 17<span style="color:#e6db74">`</span>
-</span></span><span style="display:flex;"><span>export JAVA21<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>/usr/libexec/java_home -v 21<span style="color:#e6db74">`</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Java</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">export</span> <span style="color:#111">JAVA8</span><span style="color:#f92672">=</span><span style="color:#d88200">`</span>/usr/libexec/java_home -v 1.8<span style="color:#d88200">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">export</span> <span style="color:#111">JAVA11</span><span style="color:#f92672">=</span><span style="color:#d88200">`</span>/usr/libexec/java_home -v 11<span style="color:#d88200">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">export</span> <span style="color:#111">JAVA17</span><span style="color:#f92672">=</span><span style="color:#d88200">`</span>/usr/libexec/java_home -v 17<span style="color:#d88200">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">export</span> <span style="color:#111">JAVA21</span><span style="color:#f92672">=</span><span style="color:#d88200">`</span>/usr/libexec/java_home -v 21<span style="color:#d88200">`</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># default version of java</span>
-</span></span><span style="display:flex;"><span>export JAVA_HOME<span style="color:#f92672">=</span>$JAVA21
+</span></span><span style="display:flex;"><span><span style="color:#111">export</span> <span style="color:#111">JAVA_HOME</span><span style="color:#f92672">=</span><span style="color:#111">$JAVA21</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># aliases for dynamic JVM switching</span>
-</span></span><span style="display:flex;"><span>alias java8<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;export JAVA_HOME=\$JAVA8&#34;</span>
-</span></span><span style="display:flex;"><span>alias java11<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;export JAVA_HOME=\$JAVA11&#34;</span>
-</span></span><span style="display:flex;"><span>alias java17<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;export JAVA_HOME=\$JAVA17&#34;</span>
-</span></span><span style="display:flex;"><span>alias java21<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;export JAVA_HOME=\$JAVA21&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">alias</span> <span style="color:#111">java8</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;export JAVA_HOME=\$JAVA8&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">alias</span> <span style="color:#111">java11</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;export JAVA_HOME=\$JAVA11&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">alias</span> <span style="color:#111">java17</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;export JAVA_HOME=\$JAVA17&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">alias</span> <span style="color:#111">java21</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;export JAVA_HOME=\$JAVA21&#34;</span>
 </span></span></code></pre></div><p><strong>Usage:</strong> Open a new terminal (or <code>source ~/.zshrc</code>). Default is Java 21. Run <code>java8</code>, <code>java11</code>, <code>java17</code>, or <code>java21</code> to switch for that session. <code>java -version</code> and any tool that reads <code>JAVA_HOME</code> will use the active one.</p>
 <p>Only include the versions you actually have installed—<code>java_home</code> will error if the JDK isn’t there.</p>
 
@@ -199,13 +199,26 @@ Drop this into your ~/.zshrc or ~/.bash_profile:
         <span class="g time">January 22, 2025 </span> &#8729;
          
         
-        <a href="/pages/posts/#java">java</a>
-        <a href="/pages/posts/#shell">shell</a>
-        <a href="/pages/posts/#mac">mac</a>
+        <a href="/posts/#java">java</a>
+        <a href="/posts/#shell">shell</a>
+        <a href="/posts/#mac">mac</a>
       </div>
       
     </section>
     
+    
+    <div id="comments">
+      
+<script src="https://utteranc.es/client.js"
+    repo=hirisave/pages
+    issue-term="pathname"
+    theme=github-light
+    crossorigin="anonymous"
+    async>
+</script>
+
+
+    </div>
     
     
   </div>

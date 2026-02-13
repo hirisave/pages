@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssl on Sachin</title>
+    <link>http://localhost:1313/tags/ssl/</link>
+    <description>Recent content in Ssl on Sachin</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ssl/atom.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing CA certs into the JVM truststore</title>
+      <link>http://localhost:1313/posts/installing-cacerts/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/installing-cacerts/</guid>
+      <description>&lt;p&gt;When you&amp;rsquo;re hitting an internal API over HTTPS and the JVM doesn&amp;rsquo;t trust the corp CA, you get the usual &lt;code&gt;PKIX path building failed&lt;/code&gt; or &lt;code&gt;unable to find valid certification path&lt;/code&gt; errors. Fix: add the server&amp;rsquo;s cert (or the CA that signed it) into Java&amp;rsquo;s cacerts.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;One-liner&lt;/strong&gt; (replace paths and alias as needed):&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;$JAVA_HOME&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;/bin/keytool&amp;#34;&lt;/span&gt; -importcert -alias &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;api.corp.intranet&amp;#34;&lt;/span&gt; -file &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;/Users/user/Downloads/api.corp.intranet.cer&amp;#34;&lt;/span&gt; -keystore &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;$JAVA_HOME&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;/lib/security/cacerts&amp;#34;&lt;/span&gt; -storepass changeit -noprompt&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;What to change:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;-alias&lt;/code&gt;&lt;/strong&gt; — Any label you&amp;rsquo;ll recognize (e.g. the hostname). Must be unique in the keystore.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;-file&lt;/code&gt;&lt;/strong&gt; — Path to the &lt;code&gt;.cer&lt;/code&gt; (or &lt;code&gt;.crt&lt;/code&gt;) you got from the server or your security team.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;-keystore&lt;/code&gt;&lt;/strong&gt; — Default truststore is &lt;code&gt;$JAVA_HOME/lib/security/cacerts&lt;/code&gt;. Leave as-is unless you use a custom one.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;-storepass&lt;/code&gt;&lt;/strong&gt; — Default password for the stock cacerts is &lt;code&gt;changeit&lt;/code&gt;. Yes, really.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Why &lt;code&gt;sudo&lt;/code&gt;?&lt;/strong&gt; The default cacerts is under &lt;code&gt;$JAVA_HOME/lib/security/&lt;/code&gt;, which is usually root-owned. One-time add, then your JVM trusts that cert.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

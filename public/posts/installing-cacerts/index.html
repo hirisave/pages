@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head><script src="/pages/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=pages/livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <script>
       (function() {
         var t = localStorage.getItem('theme');
@@ -10,10 +10,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Liste - http://localhost:1313/pages/">
+    <meta name="author" content="Liste - http://localhost:1313/">
     <title>Installing CA certs into the JVM truststore | Sachin</title>
-    <meta name="description" content="">
-    <meta property="og:url" content="http://localhost:1313/pages/posts/installing-cacerts/">
+    <meta name="description" content="Developer notes, pro hacks, and tips from the trenches. Minimal fluff, maximum signal.">
+    <meta property="og:url" content="http://localhost:1313/posts/installing-cacerts/">
   <meta property="og:site_name" content="Sachin">
   <meta property="og:title" content="Installing CA certs into the JVM truststore">
   <meta property="og:description" content="When you’re hitting an internal API over HTTPS and the JVM doesn’t trust the corp CA, you get the usual PKIX path building failed or unable to find valid certification path errors. Fix: add the server’s cert (or the CA that signed it) into Java’s cacerts.
@@ -40,12 +40,12 @@ sudo &#34;$JAVA_HOME/bin/keytool&#34; -importcert -alias &#34;api.corp.intranet&
   <meta itemprop="wordCount" content="165">
   <meta itemprop="keywords" content="Java,Ssl,Certificates">
     
-    <link rel="canonical" href="http://localhost:1313/pages/posts/installing-cacerts/">
-    <link rel="icon" href="http://localhost:1313/pages//assets/favicon.ico">
+    <link rel="canonical" href="http://localhost:1313/posts/installing-cacerts/">
+    <link rel="icon" href="http://localhost:1313//assets/favicon.ico">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
     <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
-    <link rel="alternate" type="application/atom+xml" title="Sachin" href="http://localhost:1313/pages//atom.xml" />
-    <link rel="alternate" type="application/json" title="Sachin" href="http://localhost:1313/pages//feed.json" />
+    <link rel="alternate" type="application/atom+xml" title="Sachin" href="http://localhost:1313//atom.xml" />
+    <link rel="alternate" type="application/json" title="Sachin" href="http://localhost:1313//feed.json" />
     <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bricolage+Grotesque">
     
@@ -63,12 +63,12 @@ sudo &#34;$JAVA_HOME/bin/keytool&#34; -importcert -alias &#34;api.corp.intranet&
       "name": "Installing CA certs into the JVM truststore",
       "headline": "Installing CA certs into the JVM truststore",
       "alternativeHeadline": "",
-      "description": "\u003cp\u003eWhen you\u0026rsquo;re hitting an internal API over HTTPS and the JVM doesn\u0026rsquo;t trust the corp CA, you get the usual \u003ccode\u003ePKIX path building failed\u003c\/code\u003e or \u003ccode\u003eunable to find valid certification path\u003c\/code\u003e errors. Fix: add the server\u0026rsquo;s cert (or the CA that signed it) into Java\u0026rsquo;s cacerts.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eOne-liner\u003c\/strong\u003e (replace paths and alias as needed):\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;\u003c\/span\u003e$JAVA_HOME\u003cspan style=\u0022color:#e6db74\u0022\u003e\/bin\/keytool\u0026#34;\u003c\/span\u003e -importcert -alias \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;api.corp.intranet\u0026#34;\u003c\/span\u003e -file \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;\/Users\/user\/Downloads\/api.corp.intranet.cer\u0026#34;\u003c\/span\u003e -keystore \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;\u003c\/span\u003e$JAVA_HOME\u003cspan style=\u0022color:#e6db74\u0022\u003e\/lib\/security\/cacerts\u0026#34;\u003c\/span\u003e -storepass changeit -noprompt\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e\u003cstrong\u003eWhat to change:\u003c\/strong\u003e\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode\u003e-alias\u003c\/code\u003e\u003c\/strong\u003e — Any label you\u0026rsquo;ll recognize (e.g. the hostname). Must be unique in the keystore.\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode\u003e-file\u003c\/code\u003e\u003c\/strong\u003e — Path to the \u003ccode\u003e.cer\u003c\/code\u003e (or \u003ccode\u003e.crt\u003c\/code\u003e) you got from the server or your security team.\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode\u003e-keystore\u003c\/code\u003e\u003c\/strong\u003e — Default truststore is \u003ccode\u003e$JAVA_HOME\/lib\/security\/cacerts\u003c\/code\u003e. Leave as-is unless you use a custom one.\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode\u003e-storepass\u003c\/code\u003e\u003c\/strong\u003e — Default password for the stock cacerts is \u003ccode\u003echangeit\u003c\/code\u003e. Yes, really.\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e\u003cstrong\u003eWhy \u003ccode\u003esudo\u003c\/code\u003e?\u003c\/strong\u003e The default cacerts is under \u003ccode\u003e$JAVA_HOME\/lib\/security\/\u003c\/code\u003e, which is usually root-owned. One-time add, then your JVM trusts that cert.\u003c\/p\u003e",
+      "description": "\u003cp\u003eWhen you\u0026rsquo;re hitting an internal API over HTTPS and the JVM doesn\u0026rsquo;t trust the corp CA, you get the usual \u003ccode\u003ePKIX path building failed\u003c\/code\u003e or \u003ccode\u003eunable to find valid certification path\u003c\/code\u003e errors. Fix: add the server\u0026rsquo;s cert (or the CA that signed it) into Java\u0026rsquo;s cacerts.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eOne-liner\u003c\/strong\u003e (replace paths and alias as needed):\u003c\/p\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo \u003cspan style=\u0022color:#d88200\u0022\u003e\u0026#34;\u003c\/span\u003e\u003cspan style=\u0022color:#111\u0022\u003e$JAVA_HOME\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\/bin\/keytool\u0026#34;\u003c\/span\u003e -importcert -alias \u003cspan style=\u0022color:#d88200\u0022\u003e\u0026#34;api.corp.intranet\u0026#34;\u003c\/span\u003e -file \u003cspan style=\u0022color:#d88200\u0022\u003e\u0026#34;\/Users\/user\/Downloads\/api.corp.intranet.cer\u0026#34;\u003c\/span\u003e -keystore \u003cspan style=\u0022color:#d88200\u0022\u003e\u0026#34;\u003c\/span\u003e\u003cspan style=\u0022color:#111\u0022\u003e$JAVA_HOME\u003c\/span\u003e\u003cspan style=\u0022color:#d88200\u0022\u003e\/lib\/security\/cacerts\u0026#34;\u003c\/span\u003e -storepass changeit -noprompt\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\u003cp\u003e\u003cstrong\u003eWhat to change:\u003c\/strong\u003e\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode\u003e-alias\u003c\/code\u003e\u003c\/strong\u003e — Any label you\u0026rsquo;ll recognize (e.g. the hostname). Must be unique in the keystore.\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode\u003e-file\u003c\/code\u003e\u003c\/strong\u003e — Path to the \u003ccode\u003e.cer\u003c\/code\u003e (or \u003ccode\u003e.crt\u003c\/code\u003e) you got from the server or your security team.\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode\u003e-keystore\u003c\/code\u003e\u003c\/strong\u003e — Default truststore is \u003ccode\u003e$JAVA_HOME\/lib\/security\/cacerts\u003c\/code\u003e. Leave as-is unless you use a custom one.\u003c\/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode\u003e-storepass\u003c\/code\u003e\u003c\/strong\u003e — Default password for the stock cacerts is \u003ccode\u003echangeit\u003c\/code\u003e. Yes, really.\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e\u003cstrong\u003eWhy \u003ccode\u003esudo\u003c\/code\u003e?\u003c\/strong\u003e The default cacerts is under \u003ccode\u003e$JAVA_HOME\/lib\/security\/\u003c\/code\u003e, which is usually root-owned. One-time add, then your JVM trusts that cert.\u003c\/p\u003e",
       "inLanguage": "en-us",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "http:\/\/localhost:1313\/pages\/posts\/installing-cacerts\/"
+          "@id": "http:\/\/localhost:1313\/posts\/installing-cacerts\/"
       },
       "author" : {
           "@type": "Person",
@@ -90,16 +90,16 @@ sudo &#34;$JAVA_HOME/bin/keytool&#34; -importcert -alias &#34;api.corp.intranet&
       "publisher":{
           "@type":"Organization",
           "name": "Sachin",
-          "url": "http://localhost:1313/pages/",
+          "url": "http://localhost:1313/",
           "logo": {
               "@type": "ImageObject",
-              "url": "http:\/\/localhost:1313\/pages\/",
+              "url": "http:\/\/localhost:1313\/assets\/favicon.ico",
               "width":"32",
               "height":"32"
           }
       },
-      "image": "http://localhost:1313/pages/",
-      "url" : "http:\/\/localhost:1313\/pages\/posts\/installing-cacerts\/",
+      "image": "http://localhost:1313/assets/favicon.ico",
+      "url" : "http:\/\/localhost:1313\/posts\/installing-cacerts\/",
       "wordCount" : "165",
       "genre" : [ "java" , "ssl" , "certificates" ],
       "keywords" : [ "java" , "ssl" , "certificates" ]
@@ -150,13 +150,13 @@ sudo &#34;$JAVA_HOME/bin/keytool&#34; -importcert -alias &#34;api.corp.intranet&
   <div class="content">
     <header>
   <p style="padding: 0;margin: 0;">
-    <a href="http://localhost:1313/pages/">
+    <a href="http://localhost:1313/">
       <span class="hero-name">Sachin</span><span class="hero-cursor" aria-hidden="true"></span>
     </a>
   </p>
   <ul style="padding: 0;margin: 0;">
-    <li><a href="http://localhost:1313/pages/posts/"><span>Posts</span></a></li>
-    <li><a href="http://localhost:1313/pages/about/"><span>About</span></a></li>
+    <li><a href="http://localhost:1313/posts/"><span>Posts</span></a></li>
+    <li><a href="http://localhost:1313/about/"><span>About</span></a></li>
     <li><button type="button" class="theme-toggle" id="theme-toggle" title="Toggle dark/light">◐</button></li>
   </ul>
 </header>
@@ -179,7 +179,7 @@ sudo &#34;$JAVA_HOME/bin/keytool&#34; -importcert -alias &#34;api.corp.intranet&
       <h2 class="post">Installing CA certs into the JVM truststore</h2>
       <p>When you&rsquo;re hitting an internal API over HTTPS and the JVM doesn&rsquo;t trust the corp CA, you get the usual <code>PKIX path building failed</code> or <code>unable to find valid certification path</code> errors. Fix: add the server&rsquo;s cert (or the CA that signed it) into Java&rsquo;s cacerts.</p>
 <p><strong>One-liner</strong> (replace paths and alias as needed):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo <span style="color:#e6db74">&#34;</span>$JAVA_HOME<span style="color:#e6db74">/bin/keytool&#34;</span> -importcert -alias <span style="color:#e6db74">&#34;api.corp.intranet&#34;</span> -file <span style="color:#e6db74">&#34;/Users/user/Downloads/api.corp.intranet.cer&#34;</span> -keystore <span style="color:#e6db74">&#34;</span>$JAVA_HOME<span style="color:#e6db74">/lib/security/cacerts&#34;</span> -storepass changeit -noprompt
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo <span style="color:#d88200">&#34;</span><span style="color:#111">$JAVA_HOME</span><span style="color:#d88200">/bin/keytool&#34;</span> -importcert -alias <span style="color:#d88200">&#34;api.corp.intranet&#34;</span> -file <span style="color:#d88200">&#34;/Users/user/Downloads/api.corp.intranet.cer&#34;</span> -keystore <span style="color:#d88200">&#34;</span><span style="color:#111">$JAVA_HOME</span><span style="color:#d88200">/lib/security/cacerts&#34;</span> -storepass changeit -noprompt
 </span></span></code></pre></div><p><strong>What to change:</strong></p>
 <ul>
 <li><strong><code>-alias</code></strong> — Any label you&rsquo;ll recognize (e.g. the hostname). Must be unique in the keystore.</li>
@@ -195,13 +195,26 @@ sudo &#34;$JAVA_HOME/bin/keytool&#34; -importcert -alias &#34;api.corp.intranet&
         <span class="g time">January 15, 2025 </span> &#8729;
          
         
-        <a href="/pages/posts/#java">java</a>
-        <a href="/pages/posts/#ssl">ssl</a>
-        <a href="/pages/posts/#certificates">certificates</a>
+        <a href="/posts/#java">java</a>
+        <a href="/posts/#ssl">ssl</a>
+        <a href="/posts/#certificates">certificates</a>
       </div>
       
     </section>
     
+    
+    <div id="comments">
+      
+<script src="https://utteranc.es/client.js"
+    repo=hirisave/pages
+    issue-term="pathname"
+    theme=github-light
+    crossorigin="anonymous"
+    async>
+</script>
+
+
+    </div>
     
     
   </div>
