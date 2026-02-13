@@ -1,6 +1,6 @@
 ---
 title: "Installing CA certs into the JVM truststore"
-date: "2025-02-12"
+date: "2025-01-15"
 tags:
   - java
   - ssl

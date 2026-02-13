@@ -1,6 +1,6 @@
 ---
 title: "Switching between multiple Java versions (macOS)"
-date: "2025-02-12"
+date: "2025-01-22"
 tags:
   - java
   - shell
